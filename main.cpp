@@ -3,13 +3,13 @@
 
 using namespace std;
 
-int amount;
+double amount;
 char choice;
 int q;
 int d;
 int n;
 int p;
-int rate;
+double rate;
 
 void menu(){
 	cout << "Please choose: " << endl;
@@ -23,13 +23,16 @@ void tip(){
 }
 
 void coins(){
-	cout << "Quarters: " << amount/25 << endl;
+	if (amount % 0.25 = 0){
+		cout << amount << " is " << amount/0.25 << " int quarters" << endl;
+	}
 }
 
 void exch(){
-	cout << "Enter Exchange rate: "
+	cout << "Enter Exchange rate: ";
 	cin >> rate;
-	
+	cout << "Amount in that rate is: " << rate*amount << endl;
+}
 
 int main(){
 	cout << "Enter amount: " ;
@@ -49,9 +52,11 @@ int main(){
 			break;
 			
 			case '3':
-				
+				exch();
+			break;
 			
-				
+			default:
+				cout << choice << " is not valid..." << endl;
 		}
 		
 	
