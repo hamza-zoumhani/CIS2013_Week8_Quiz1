@@ -79,12 +79,6 @@ int main(){
 		cin >> again;
 		
 	}while('n' != again);
-		
-
-	
-	
-	
-	
 	
 	return 0;
 	
