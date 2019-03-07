@@ -10,6 +10,7 @@ int d;
 int n;
 int p;
 double rate;
+int change;
 
 void menu(){
 	cout << "Please choose: " << endl;
@@ -23,9 +24,21 @@ void tip(){
 }
 
 void coins(){
-	if (amount % 0.25 = 0){
-		cout << amount << " is " << amount/0.25 << " int quarters" << endl;
-	}
+	change= amount * 100;
+	q = change/25;
+	
+	change = change%25;
+	d = change/10;
+	
+	change = change%10;
+	n = change/5;
+	
+	change = change%5;
+	p = change/1;
+	
+	cout << amount << " in coins is: " << endl;
+	cout << q << " Quarters, " << d << " Dimes, " << n 
+	<< " Nickels, " << p << " pennies." << endl;
 }
 
 void exch(){
@@ -42,6 +55,8 @@ int main(){
 	char again = 'Y' && 'y';
 	
 	do{
+		menu();
+		cin>> choice;
 		switch(choice){
 			case '1':
 				tip();
@@ -62,7 +77,7 @@ int main(){
 	
 		cout << "\nDo you need to go again(Y/N): " ;
 		cin >> again;
-		}
+		
 	}while('n' != again);
 		
 
