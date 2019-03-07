@@ -20,7 +20,7 @@ void menu(){
 }
 
 void tip(){
-	cout << "15% tip amount: " << amount*0.15 << endl;
+	cout << "15% tip amount: $" << amount*0.15 << endl;
 }
 
 void coins(){
@@ -36,7 +36,7 @@ void coins(){
 	change = change%5;
 	p = change/1;
 	
-	cout << amount << " in coins is: " << endl;
+	cout << "$" << amount << " in coins is: " << endl;
 	cout << q << " Quarters, " << d << " Dimes, " << n 
 	<< " Nickels, " << p << " pennies." << endl;
 }
@@ -44,7 +44,7 @@ void coins(){
 void exch(){
 	cout << "Enter Exchange rate: ";
 	cin >> rate;
-	cout << "Amount in that rate is: " << rate*amount << endl;
+	cout << "Amount in that rate is: $" << rate*amount << endl;
 }
 
 int main(){
